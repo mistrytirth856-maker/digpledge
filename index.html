@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <title>NCC Pledge – Viksit Bharat</title>
 
-<!-- Google Fonts (optional for professional look) -->
+<!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 
 <style>
@@ -52,24 +52,6 @@ body{
     margin:4px 0 0;
     font-size:22px;
     font-family: 'Garamond', serif;
-}
-
-/* Left logo */
-.hero .left-logo{
-    position:absolute;
-    top:20px;
-    left:20px;
-    width:90px;
-    height:auto;
-}
-
-/* Right banner/image */
-.hero .right-image{
-    position:absolute;
-    top:20px;
-    right:20px;
-    width:140px;
-    height:auto;
 }
 
 .hero h1{
@@ -187,12 +169,6 @@ canvas{
         <h2>Government Polytechnic Ahmedabad</h2>
     </div>
 
-    <!-- Left NCC logo -->
-    <img src="ncc_logo.png" alt="NCC Logo" class="left-logo">
-
-    <!-- Right banner/image -->
-    <img src="pledge_banner.png" alt="Pledge Banner" class="right-image">
-
     <div style="max-width:800px; z-index:1; margin-top:50px;">
         <h1>Viksit Bharat & Women Empowerment Pledge</h1>
         <p>
@@ -219,7 +195,7 @@ canvas{
 </select>
 
 <textarea id="pledgeText" placeholder="Type your pledge here..." required>
-I pledge to respect and empower women for a strong and developed India मैं महिलाओं के सम्मान एवं सशक्तिकरण हेतु प्रतिबद्ध रहूँगी /रहूंगा 
+I pledge to respect and empower women for a strong and developed India 
 </textarea>
 
 <button class="submit-btn" onclick="createCertificate()">Submit Pledge</button>
@@ -251,16 +227,13 @@ function createCertificate(){
     const c = document.getElementById("certificateCanvas");
     const ctx = c.getContext("2d");
 
-    // Background
     ctx.fillStyle="#ffffff";
     ctx.fillRect(0,0,c.width,c.height);
 
-    // Border
     ctx.strokeStyle="#0f4c81";
     ctx.lineWidth=14;
     ctx.strokeRect(15,15,c.width-30,c.height-30);
 
-    // NCC Header
     ctx.fillStyle="#0f4c81";
     ctx.font="bold 36px Garamond";
     ctx.textAlign="center";
@@ -269,11 +242,6 @@ function createCertificate(){
     ctx.font="22px Garamond";
     ctx.fillText("Certificate of Pledge",c.width/2,105);
 
-    // Ashoka Chakra
-    ctx.font="70px serif";
-    ctx.fillText("☸",c.width/2,160);
-
-    // Body
     ctx.fillStyle="#000";
     ctx.font="26px Garamond";
     ctx.fillText("This is to certify that",c.width/2,230);
@@ -293,7 +261,6 @@ function createCertificate(){
         c.width/2,460
     );
 
-    // Footer tricolour
     ctx.fillStyle="#ff9933";
     ctx.fillRect(20,c.height-90,c.width-40,20);
     ctx.fillStyle="#ffffff";
