@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NCC Pledge – Viksit Bharat</title>
+
+<!-- Google Fonts (optional for professional look) -->
+<link href="https://fonts.googleapis.com/css2?family=Garamond:wght@400;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<style>
+body{
+    margin:0;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior:smooth;
+}
+
+/* ===== HERO (TRICOLOUR) ===== */
+.hero{
+    height:100vh;
+    background: linear-gradient(
+        to bottom,
+        #ff9933 0%,
+        #ffffff 50%,
+        #138808 100%
+    );
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:20px;
+    position:relative;
+}
+
+/* Top header */
+.hero .header-text{
+    position:absolute;
+    top:10px;
+    width:100%;
+    text-align:center;
+    color:#0f4c81;
+}
+
+.hero .header-text h2{
+    margin:0;
+    font-size:36px;
+    font-family: 'Garamond', serif;
+    font-weight:bold;
+}
+
+.hero .header-text p{
+    margin:4px 0 0;
+    font-size:22px;
+    font-family: 'Garamond', serif;
+}
+
+/* Left logo */
+.hero .left-logo{
+    position:absolute;
+    top:20px;
+    left:20px;
+    width:90px;
+    height:auto;
+}
+
+/* Right banner/image */
+.hero .right-image{
+    position:absolute;
+    top:20px;
+    right:20px;
+    width:140px;
+    height:auto;
+}
+
+.hero h1{
+    font-size:44px;
+    font-family: 'Garamond', serif;
+    font-weight:bold;
+    margin-top:80px;
+    line-height:1.3;
+    z-index:1;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:20px;
+    line-height:1.5;
+    z-index:1;
+}
+
+.hero button{
+    margin-top:35px;
+    padding:18px 45px;
+    font-size:20px;
+    border:none;
+    border-radius:8px;
+    background:#0f4c81;
+    color:white;
+    cursor:pointer;
+    z-index:1;
+}
+
+/* ===== REGISTER ===== */
+.register{
+    padding:100px 20px;
+    background:#f9fafb;
+}
+
+.box{
+    max-width:600px;
+    background:white;
+    padding:40px;
+    margin:auto;
+    border-radius:15px;
+    box-shadow:0 8px 30px rgba(0,0,0,0.18);
+    text-align:center;
+}
+
+.box h2{
+    text-align:center;
+    font-size:32px;
+    font-family:'Garamond', serif;
+    margin-bottom:15px;
+}
+
+input, select, textarea{
+    width:100%;
+    padding:14px;
+    margin:12px 0;
+    font-family: 'Roboto', sans-serif;
+    font-size:18px;
+    border:1px solid #ccc;
+    border-radius:6px;
+}
+
+textarea{
+    height:100px;
+    resize:none;
+}
+
+.submit-btn{
+    width:100%;
+    padding:15px;
+    background:#138808;
+    color:white;
+    border:none;
+    font-size:20px;
+    font-weight:bold;
+    cursor:pointer;
+    border-radius:6px;
+}
+
+/* ===== CERTIFICATE ===== */
+.pledge-img{
+    display:none;
+    text-align:center;
+    margin-top:50px;
+}
+
+canvas{
+    border-radius:12px;
+    box-shadow:0 8px 25px rgba(0,0,0,0.3);
+}
+
+.download-btn{
+    margin-top:20px;
+    padding:12px 35px;
+    background:#0f4c81;
+    color:white;
+    border:none;
+    font-size:18px;
+    cursor:pointer;
+    border-radius:6px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- HERO -->
+<section class="hero">
+
+    <!-- Top header center -->
+    <div class="header-text">
+        <h2>National Cadet Corps</h2>
+        <h2>Government Polytechnic Ahmedabad</h2>
+    </div>
+
+    <!-- Left NCC logo -->
+    <img src="ncc_logo.png" alt="NCC Logo" class="left-logo">
+
+    <!-- Right banner/image -->
+    <img src="pledge_banner.png" alt="Pledge Banner" class="right-image">
+
+    <div style="max-width:800px; z-index:1; margin-top:50px;">
+        <h1>Viksit Bharat & Women Empowerment Pledge</h1>
+        <p>
+            National Cadet Corps initiative to strengthen equality, dignity,
+            and empowerment of women for a strong and developed India.
+        </p>
+        <button onclick="document.getElementById('register').scrollIntoView();">
+            Take Pledge
+        </button>
+    </div>
+</section>
+
+<!-- REGISTER -->
+<section class="register" id="register">
+<div class="box">
+
+<h2>Pledge Registration</h2>
+
+<input type="text" id="name" placeholder="Full Name" required>
+
+<select id="gender">
+    <option value="female">Female</option>
+    <option value="male">Male</option>
+</select>
+
+<textarea id="pledgeText" placeholder="Type your pledge here..." required>
+I pledge to respect and empower women for a strong and developed India मैं महिलाओं के सम्मान एवं सशक्तिकरण हेतु प्रतिबद्ध रहूँगी /रहूंगा 
+</textarea>
+
+<button class="submit-btn" onclick="createCertificate()">Submit Pledge</button>
+
+<div class="pledge-img" id="pledgePhoto">
+    <h3>Certificate of Pledge 🇮🇳</h3>
+    <canvas id="certificateCanvas" width="900" height="650"></canvas><br>
+    <button class="download-btn" onclick="downloadCertificate()">Download Certificate</button>
+</div>
+
+</div>
+</section>
+
+<script>
+function createCertificate(){
+    const name = document.getElementById("name").value.trim();
+    const gender = document.getElementById("gender").value;
+    const pledge = document.getElementById("pledgeText").value.trim();
+
+    if(!name || !pledge){
+        alert("Please complete the pledge.");
+        return;
+    }
+
+    const hindiLine = gender === "female"
+        ? "मैं महिलाओं के सम्मान एवं सशक्तिकरण हेतु प्रतिबद्ध रहूँगी।"
+        : "मैं महिलाओं के सम्मान एवं सशक्तिकरण हेतु प्रतिबद्ध रहूँगा।";
+
+    const c = document.getElementById("certificateCanvas");
+    const ctx = c.getContext("2d");
+
+    // Background
+    ctx.fillStyle="#ffffff";
+    ctx.fillRect(0,0,c.width,c.height);
+
+    // Border
+    ctx.strokeStyle="#0f4c81";
+    ctx.lineWidth=14;
+    ctx.strokeRect(15,15,c.width-30,c.height-30);
+
+    // NCC Header
+    ctx.fillStyle="#0f4c81";
+    ctx.font="bold 36px Garamond";
+    ctx.textAlign="center";
+    ctx.fillText("NATIONAL CADET CORPS (NCC)",c.width/2,70);
+
+    ctx.font="22px Garamond";
+    ctx.fillText("Certificate of Pledge",c.width/2,105);
+
+    // Ashoka Chakra
+    ctx.font="70px serif";
+    ctx.fillText("☸",c.width/2,160);
+
+    // Body
+    ctx.fillStyle="#000";
+    ctx.font="26px Garamond";
+    ctx.fillText("This is to certify that",c.width/2,230);
+
+    ctx.font="bold 38px Garamond";
+    ctx.fillText(name.toUpperCase(),c.width/2,290);
+
+    ctx.font="24px Garamond";
+    ctx.fillText(pledge,c.width/2,350);
+
+    ctx.font="26px Garamond";
+    ctx.fillText(hindiLine,c.width/2,400);
+
+    ctx.font="22px Garamond";
+    ctx.fillText(
+        "Committed to equality, dignity and nation building.",
+        c.width/2,460
+    );
+
+    // Footer tricolour
+    ctx.fillStyle="#ff9933";
+    ctx.fillRect(20,c.height-90,c.width-40,20);
+    ctx.fillStyle="#ffffff";
+    ctx.fillRect(20,c.height-70,c.width-40,20);
+    ctx.fillStyle="#138808";
+    ctx.fillRect(20,c.height-50,c.width-40,20);
+
+    document.getElementById("pledgePhoto").style.display="block";
+}
+
+function downloadCertificate(){
+    const link=document.createElement("a");
+    link.download="NCC_Pledge_Certificate.png";
+    link.href=document.getElementById("certificateCanvas").toDataURL();
+    link.click();
+}
+</script>
+
+</body>
+</html>
