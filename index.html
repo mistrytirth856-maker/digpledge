@@ -363,8 +363,8 @@ function drawCertificate(name, gender) {
        ];
     ctx.font = "bold 24px Inter";
     ctx.fillStyle = "#000080";
-    ctx.fillText(hindi, c.width/2, 510);
-
+    ctx.fillText(hindi[0], c.width/2, 510);
+    ctx.fillText(hindi[1], c.width/2, 540);
     // Footer
     ctx.textAlign = "left"; ctx.font = "18px Inter"; ctx.fillStyle = "#666";
     ctx.fillText("Date: " + date, 80, 620);
