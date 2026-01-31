@@ -325,9 +325,9 @@ function drawCertificate(name, gender) {
 
     if(nccLogo.complete) {
         // Left Logo
-        ctx.drawImage(nccLogo, 60, 85, 110, 110);
+        ctx.drawImage(nccLogo, 80, 75, 75, 75);
         // Right Logo
-        ctx.drawImage(nccLogo, 830, 85, 110, 110);
+        ctx.drawImage(nccLogo, 825, 75, 75, 75);
     }
     // Headings
     ctx.textAlign = "center";
@@ -356,7 +356,7 @@ function drawCertificate(name, gender) {
     ctx.font = "20px Inter";
     ctx.fillText("has taken a pledge to Empower Women for a Viksit Bharat.", c.width/2, 450);
 
-    const hindi = gender === "female" ? "मैं महिलाओं के सम्मान हेतु प्रतिबद्ध रहूँगी।" : "मैं महिलाओं के सम्मान हेतु प्रतिबद्ध रहूँगा।";
+    const hindi = gender === "female" ? "मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करती हूँ।।" : "मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करता हूँ।।";
     ctx.font = "bold 24px Inter";
     ctx.fillStyle = "#000080";
     ctx.fillText(hindi, c.width/2, 510);
