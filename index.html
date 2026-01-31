@@ -1,401 +1,274 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Official NCC Pledge - Alumni Unity March 2026</title>
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --india-saffron: #FF9933;
-            --india-white: #FFFFFF;
-            --india-green: #138808;
-            --ncc-blue: #00264d;
-            --ashoka-blue: #000080;
-        }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Official NCC Pledge - Alumni Unity March 2026</title>
 
-        body {
-            margin: 0;
-            font-family: 'Inter', sans-serif;
-            background-color: #f0f2f5;
-            color: #333;
-        }
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
-        /* Optimized Header for Mobile */
-.main-header {
-    background: var(--india-white);
-    padding: 10px 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Spreads logos to the edges */
-    border-bottom: 4px solid var(--ncc-blue);
+<style>
+:root{
+    --india-saffron:#FF9933;
+    --india-green:#138808;
+    --ncc-blue:#00264d;
 }
 
-.nav-logo {
-    height: 60px; /* Smaller for mobile */
-    width: auto;
+body{
+    margin:0;
+    font-family:'Inter',sans-serif;
+    background:#f0f2f5;
 }
 
-.header-text {
-    text-align: center;
-    flex: 1; /* Allows text to take middle space */
+.main-header{
+    background:#fff;
+    padding:10px 15px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    border-bottom:4px solid var(--ncc-blue);
 }
 
-.header-text h1 {
-    font-size: 1.1rem; /* Smaller text so it fits one line */
-    margin: 0;
+.nav-logo{height:60px}
+
+.header-text{text-align:center;flex:1}
+.header-text h1{margin:0;font-size:1.1rem}
+.header-text h2{margin:0;font-size:.65rem}
+
+.hero{
+    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6));
+    background-color:var(--ncc-blue);
+    color:#fff;
+    padding:30px 15px;
+    text-align:center;
 }
 
-.header-text h2 {
-    font-size: 0.65rem;
-    margin-top: 2px;
+.hero-quote{
+    font-style:italic;
+    font-size:.9rem;
+    max-width:85%;
+    margin:15px auto;
+    color:#ffd1a3;
+    border-left:3px solid var(--india-saffron);
+    padding-left:12px;
 }
 
-/* For Desktop - Reset to larger sizes */
-@media (min-width: 768px) {
-    .nav-logo { height: 90px; }
-    .header-text h1 { font-size: 2rem; }
-    .header-text h2 { font-size: 1.1rem; }
-    .main-header { justify-content: center; gap: 40px; }
-}
-        /* HERO SECTION */
-        .hero {
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://www.transparenttextures.com/patterns/gplay.png');
-            background-color: var(--ncc-blue);
-            color: white;
-            padding: 80px 20px;
-            text-align: center;
-        }
-
-        .hero h3 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        /* TRICOLOR REGISTRATION PORTAL */
-        .registration-section {
-            display: flex;
-            justify-content: center;
-            padding: 50px 20px;
-            margin-top: -40px; /* Slight overlap with hero */
-        }
-
-        .pledge-card {
-            background: white;
-            width: 100%;
-            max-width: 600px;
-            border-radius: 15px;
-            overflow: hidden;
-            box-shadow: 0 15px 35px rgba(0,0,0,0.2);
-            border: 1px solid #ddd;
-        }
-
-        /* Tricolor Header Bar */
-        .tricolor-indicator {
-            height: 10px;
-            display: flex;
-        }
-        .tri-orange { flex: 1; background: var(--india-saffron); }
-        .tri-white { flex: 1; background: var(--india-white); }
-        .tri-green { flex: 1; background: var(--india-green); }
-
-        .card-body {
-            padding: 40px;
-        }
-
-        .card-body h2 {
-            text-align: center;
-            color: var(--ncc-blue);
-            font-family: 'Playfair Display', serif;
-            margin-bottom: 30px;
-            border-bottom: 2px solid #f0f0f0;
-            padding-bottom: 10px;
-        }
-
-        .input-group {
-            margin-bottom: 20px;
-        }
-
-        label {
-            display: block;
-            font-weight: 600;
-            margin-bottom: 8px;
-            color: #555;
-        }
-
-        input, select, textarea {
-            width: 100%;
-            padding: 12px;
-            border: 2px solid #e1e1e1;
-            border-radius: 8px;
-            font-size: 1rem;
-            box-sizing: border-box;
-            transition: 0.3s;
-        }
-
-        input:focus, select:focus {
-            border-color: var(--india-saffron);
-            outline: none;
-        }
-
-        .submit-btn {
-            width: 100%;
-            padding: 15px;
-            background: var(--india-green);
-            color: white;
-            border: none;
-            border-radius: 8px;
-            font-size: 1.1rem;
-            font-weight: bold;
-            cursor: pointer;
-            transition: 0.3s;
-            box-shadow: 0 4px 15px rgba(19, 136, 8, 0.3);
-        }
-
-        .submit-btn:hover {
-            background: #0e5606;
-            transform: translateY(-2px);
-        }
-
-       
-       
-        /* CERTIFICATE SECTION */
-        #certificateSection {
-            display: none;
-            text-align: center;
-            padding: 50px 20px;
-        }
-
-        canvas {
-            max-width: 100%;
-            height: auto;
-            border: 5px solid var(--ncc-blue);
-            border-radius: 5px;
-        }
-
-        .btn-group {
-            margin-top: 25px;
-            display: flex;
-            gap: 15px;
-            justify-content: center;
-        }
-
-        .download-btn {
-            background: var(--india-saffron);
-            color: white;
-            padding: 12px 30px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            font-weight: 600;
-        }
-
-        @media (max-width: 600px) {
-            nav h1 { font-size: 1.3rem; }
-            .card-body { padding: 20px; }
-        }
-
-        .hero-quote {
-    font-style: italic;
-    font-size: 0.9rem; /* Not too big, not too small */
-    max-width: 85%;
-    margin: 15px auto 0 auto;
-    color: #ffd1a3; /* Soft orange so it's easy on the eyes */
-    border-left: 3px solid #FF9933; /* A little orange line on the side */
-    padding-left: 12px;
-    line-height: 1.4;
+.registration-section{
+    display:flex;
+    justify-content:center;
+    padding:40px 15px;
 }
 
-/* This makes the blue hero box look better on phones */
-.hero {
-    padding: 30px 15px;
+.pledge-card{
+    background:#fff;
+    max-width:600px;
+    width:100%;
+    border-radius:15px;
+    overflow:hidden;
+    box-shadow:0 15px 35px rgba(0,0,0,.2);
 }
-    </style>
+
+.tricolor-indicator{display:flex;height:8px}
+.tri-orange{flex:1;background:var(--india-saffron)}
+.tri-white{flex:1;background:#fff}
+.tri-green{flex:1;background:var(--india-green)}
+
+.card-body{padding:30px}
+
+.card-body h2{
+    text-align:center;
+    color:var(--ncc-blue);
+    font-family:'Playfair Display',serif;
+}
+
+.input-group{margin-bottom:18px}
+
+label{font-weight:600}
+
+input,select,textarea{
+    width:100%;
+    padding:12px;
+    border:2px solid #ddd;
+    border-radius:8px;
+}
+
+.submit-btn{
+    width:100%;
+    padding:14px;
+    background:var(--india-green);
+    color:#fff;
+    border:none;
+    border-radius:8px;
+    font-size:1.1rem;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+#certificateSection{
+    display:none;
+    text-align:center;
+    padding:40px 15px;
+}
+
+canvas{
+    max-width:100%;
+    border:5px solid var(--ncc-blue);
+}
+
+.download-btn{
+    background:var(--india-saffron);
+    color:#fff;
+    padding:12px 25px;
+    border:none;
+    border-radius:5px;
+    cursor:pointer;
+}
+</style>
 </head>
+
 <body>
 
 <nav class="main-header">
-    <img src="NCC_logo.png" alt="Logo" class="nav-logo">
-    <div class="header-text">
-        <h1>NATIONAL CADET CORPS</h1>
-        <h2 style="text-align: center;">NCC ALUMNI UNITY MARCH 2026</h2>
-    </div>
-    <img src="NCC_logo.png" alt="Logo" class="nav-logo">
+<img src="NCC_logo.png" class="nav-logo">
+<div class="header-text">
+<h1>NATIONAL CADET CORPS</h1>
+<h2>NCC ALUMNI UNITY MARCH 2026</h2>
+</div>
+<img src="NCC_logo.png" class="nav-logo">
 </nav>
 
 <section class="hero">
-    <h3>Empower Women For a Viksit Bharat</h3>
-    <p>A Commitment towards a Stronger and Empowered Nation.</p>
-    <p class="hero-quote">As women of this nation, we stand with strength, dignity, and determination.
-We are committed to learning, leading, and contributing in every way we can.
-When we grow, our families grow — and our nation grows with us </p>
-    <h4 style="text-align: center;""> - Voice of Empowered Woman</h4>
+<h3>Empower Women For a Viksit Bharat</h3>
+<p class="hero-quote">
+As women of this nation, we stand with strength, dignity, and determination.
+When we grow, our nation grows with us.
+</p>
 </section>
 
 <section class="registration-section" id="register">
-    <div class="pledge-card">
-        <div class="tricolor-indicator">
-            <div class="tri-orange"></div>
-            <div class="tri-white"></div>
-            <div class="tri-green"></div>
-        </div>
-        <div class="card-body">
-            <h2>Pledge Registration</h2>
-           
-            <div class="input-group">
-                <label>Full Name</label>
-                <input type="text" id="name" placeholder="Enter your full name">
-            </div>
+<div class="pledge-card">
+<div class="tricolor-indicator">
+<div class="tri-orange"></div>
+<div class="tri-white"></div>
+<div class="tri-green"></div>
+</div>
 
-            <div class="input-group">
-                <label>Gender</label>
-                <select id="gender">
-                    <option value="">-- Select Gender --</option>
-                    <option value="female">Female</option>
-                    <option value="male">Male</option>
-                </select>
-            </div>
+<div class="card-body">
+<h2>Pledge Registration</h2>
 
-            <div class="input-group">
-                <label>The Pledge</label>
-                <textarea id="pledgeText" rows="3" readonly style="background: #f9f9f9; font-style: italic;">"I pledge to uphold the dignity, safety and empowerment of women for a strong and developed India मैं एक मजबूत और विकसित भारत के लिए महिलाओं का सम्मान और सशक्तिकरण करने का संकल्प लेता/लेती हूँ।"</textarea>
-            </div>
+<div class="input-group">
+<label>Full Name</label>
+<input type="text" id="name" placeholder="Enter your full name">
+</div>
 
-            <button class="submit-btn" onclick="submitPledge()">Submit & Generate Certificate</button>
-        </div>
-    </div>
+<div class="input-group">
+<label>Gender</label>
+<select id="gender">
+<option value="">-- Select Gender --</option>
+<option value="female">Female</option>
+<option value="male">Male</option>
+</select>
+</div>
+
+<div class="input-group">
+<label>The Pledge</label>
+<textarea rows="3" readonly>
+मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करता/करती हूँ।
+</textarea>
+</div>
+
+<button class="submit-btn" onclick="submitPledge()">Submit & Generate Certificate</button>
+</div>
+</div>
 </section>
-
 
 <section id="certificateSection">
-    <h2 style="color: var(--ncc-blue);">Your Commitment Certificate</h2>
-    <canvas id="canvas" width="1000" height="700"></canvas>
-   
-    <div class="btn-group">
-        <button class="download-btn" onclick="downloadCert()">Download Certificate</button>        
-    </div>
+<h2>Your Commitment Certificate</h2>
+<canvas id="canvas" width="1000" height="700"></canvas>
+<br><br>
+<button class="download-btn" onclick="downloadCert()">Download Certificate</button>
 </section>
 
-
 <script>
-    const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbz-hnWClEpjSRxGZdoLakX1WLoRG7PYzssUgs5rdZyQyo6kn-dCBdNB5-bBub7HQt1w/exec";
-    const nccLogo = new Image();
-nccLogo.crossOrigin = "anonymous";
-nccLogo.src = 'NCC_logo.png';
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxH7QS-m8_x05OM8RDE0viewpMTPnKCCU2eXr088B70AMrbLsziVRXr2uAtPg2KOOrrcw/exec";
+
+const nccLogo = new Image();
+nccLogo.src = "NCC_logo.png";
+
 function submitPledge(){
     const name = document.getElementById("name").value.trim();
     const gender = document.getElementById("gender").value;
-    // SHOW the section
-    document.getElementById("register").style.display="none";
-    document.getElementById("certificateSection").style.display="block";
 
-    // CALL the drawing function
-    drawCertificate(name, gender);
     if(!name || !gender){
-        alert("Please provide all required details.");
+        alert("Please fill all details");
         return;
     }
 
     const formData = new FormData();
-        formData.append("name", name);
-        formData.append("gender", gender);
-        fetch(SCRIPT_URL, { method: 'POST', body: formData, mode: 'no-cors'});
+    formData.append("name", name);
+    formData.append("gender", gender);
 
-        document.getElementById("register").style.display="none";
-        document.querySelector(".hero").style.display="none";
-        document.getElementById("certificateSection").style.display="block";
-        drawCertificate(name, gender);
-    }
+    fetch(SCRIPT_URL,{
+        method:"POST",
+        body:formData,
+        mode:"no-cors"
+    });
 
-function drawCertificate(name, gender) {
-    const c = document.getElementById("canvas");
-    const ctx = c.getContext("2d");
-    const date = new Date().toLocaleDateString("en-IN", {day: 'numeric', month: 'long', year: 'numeric'});
+    document.getElementById("register").style.display="none";
+    document.querySelector(".hero").style.display="none";
+    document.getElementById("certificateSection").style.display="block";
 
-    // Background
-    ctx.fillStyle = "#ffffff";
-    ctx.fillRect(0, 0, c.width, c.height);
+    drawCertificate(name,gender);
+}
 
-    // Tricolor Border
-    ctx.strokeStyle = "#FF9933"; ctx.lineWidth = 15;
-    ctx.strokeRect(10, 10, c.width-20, c.height-20);
-    ctx.strokeStyle = "#138808"; ctx.lineWidth = 15;
-    ctx.strokeRect(25, 25, c.width-50, c.height-50);
+function drawCertificate(name,gender){
+    const c=document.getElementById("canvas");
+    const ctx=c.getContext("2d");
 
-    if(nccLogo.complete) {
-        // Left Logo
-        ctx.drawImage(nccLogo, 60, 85, 110, 110);
-        // Right Logo
-        ctx.drawImage(nccLogo, 830, 85, 110, 110);
-    }
-    // Headings
-    ctx.textAlign = "center";
-    ctx.fillStyle = "#00264d";
-    ctx.font = "bold 40px Cinzel";
-    ctx.fillText("NATIONAL CADET CORPS", c.width/2, 130);
-   
-    ctx.font = "22px Inter";
-    ctx.fillStyle = "#138808";
-    ctx.fillText("NCC ALUMNI UNITY MARCH 2026", c.width/2, 170);
+    ctx.fillStyle="#fff";
+    ctx.fillRect(0,0,c.width,c.height);
 
-    ctx.fillStyle = "#333";
-    ctx.font = "italic 30px Playfair Display";
-    ctx.fillText("Certificate of Pledge", c.width/2, 250);
+    ctx.strokeStyle="#FF9933";ctx.lineWidth=15;
+    ctx.strokeRect(10,10,c.width-20,c.height-20);
+    ctx.strokeStyle="#138808";ctx.lineWidth=15;
+    ctx.strokeRect(25,25,c.width-50,c.height-50);
 
-    ctx.font = "22px Inter";
-    ctx.fillText("This is to certify that", c.width/2, 320);
+    ctx.drawImage(nccLogo,60,80,110,110);
+    ctx.drawImage(nccLogo,830,80,110,110);
 
-    // Name
-    ctx.font = "bold 50px Playfair Display";
-    ctx.fillStyle = "#FF9933";
-    ctx.fillText(name.toUpperCase(), c.width/2, 390);
+    ctx.textAlign="center";
+    ctx.fillStyle="#00264d";
+    ctx.font="bold 40px Cinzel";
+    ctx.fillText("NATIONAL CADET CORPS",500,140);
 
-    // Text
-    ctx.fillStyle = "#333";
-    ctx.font = "20px Inter";
-    ctx.fillText("has taken a pledge to Empower Women for a Viksit Bharat.", c.width/2, 450);
+    ctx.font="22px Inter";
+    ctx.fillStyle="#138808";
+    ctx.fillText("NCC ALUMNI UNITY MARCH 2026",500,180);
 
-   const hindi = gender === "female" ? [
-       "मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए","महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करती हूँ।"
-                                       ]:[ 
-       "मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए","महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करता हूँ।"
-       ];
-    ctx.font = "bold 24px Inter";
-    ctx.fillStyle = "#000080";
-    ctx.fillText(hindi[0], c.width/2, 510);
-    ctx.fillText(hindi[1], c.width/2, 540);
-    // Footer
-    ctx.textAlign = "left"; ctx.font = "18px Inter"; ctx.fillStyle = "#666";
-    ctx.fillText("Date: " + date, 80, 620);
-   
-    ctx.textAlign = "right"; ctx.font = "bold 18px Inter"; ctx.fillStyle = "#00264d";
-    ctx.fillText(" 1 GUJARAT GIRLS BATTALION NCC AHMEDABAD", c.width-80, 620);
+    ctx.font="italic 30px Playfair Display";
+    ctx.fillStyle="#333";
+    ctx.fillText("Certificate of Pledge",500,260);
+
+    ctx.font="bold 48px Playfair Display";
+    ctx.fillStyle="#FF9933";
+    ctx.fillText(name.toUpperCase(),500,340);
+
+    ctx.font="22px Inter";
+    ctx.fillStyle="#333";
+    ctx.fillText(
+      gender==="female"
+      ?"महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करती हूँ।"
+      :"महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करता हूँ।",
+      500,420
+    );
 }
 
 function downloadCert(){
-    const canvas = document.getElementById("canvas");
-    const link = document.createElement("a");
-   
-    // Set filename
-    link.download = `NCC_Pledge_${Date.now()}.png`;
-   
-    try {
-        // Convert canvas to image
-        link.href = canvas.toDataURL("image/png");
-       
-        // Trigger the download
-        link.click();
-       
-        // Wait 2 seconds, then redirect to Instagram
-        setTimeout(() => {
-            window.location.href = "https://www.instagram.com/ncc_gpa_";
-        }, 500);
-
-    } catch (err) {
-        console.error("Download failed:", err);
-        alert("Please use a modern browser or upload this to GitHub to enable downloads.");
-    }
+    const canvas=document.getElementById("canvas");
+    const link=document.createElement("a");
+    link.download="NCC_Pledge_Certificate.png";
+    link.href=canvas.toDataURL();
+    link.click();
 }
 </script>
 
