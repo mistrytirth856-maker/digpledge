@@ -8,120 +8,150 @@
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Inter:wght@400;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
 
 <style>
-:root{
-    --india-saffron:#FF9933;
-    --india-green:#138808;
-    --ncc-blue:#00264d;
+:root {
+    --india-saffron: #FF9933;
+    --india-white: #FFFFFF;
+    --india-green: #138808;
+    --ncc-blue: #00264d;
+    --ashoka-blue: #000080;
 }
 
-body{
-    margin:0;
-    font-family:'Inter',sans-serif;
-    background:#f0f2f5;
+body {
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    background-color: #f0f2f5;
+    color: #333;
 }
 
-.main-header{
-    background:#fff;
-    padding:10px 15px;
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    border-bottom:4px solid var(--ncc-blue);
+.main-header {
+    background: var(--india-white);
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 4px solid var(--ncc-blue);
 }
 
-.nav-logo{height:60px}
-
-.header-text{text-align:center;flex:1}
-.header-text h1{margin:0;font-size:1.1rem}
-.header-text h2{margin:0;font-size:.65rem}
-
-.hero{
-    background:linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6));
-    background-color:var(--ncc-blue);
-    color:#fff;
-    padding:30px 15px;
-    text-align:center;
+.nav-logo {
+    height: 60px;
 }
 
-.hero-quote{
-    font-style:italic;
-    font-size:.9rem;
-    max-width:85%;
-    margin:15px auto;
-    color:#ffd1a3;
-    border-left:3px solid var(--india-saffron);
-    padding-left:12px;
+.header-text {
+    text-align: center;
+    flex: 1;
 }
 
-.registration-section{
-    display:flex;
-    justify-content:center;
-    padding:40px 15px;
+.header-text h1 {
+    font-size: 1.1rem;
+    margin: 0;
 }
 
-.pledge-card{
-    background:#fff;
-    max-width:600px;
-    width:100%;
-    border-radius:15px;
-    overflow:hidden;
-    box-shadow:0 15px 35px rgba(0,0,0,.2);
+.header-text h2 {
+    font-size: 0.65rem;
+    margin-top: 2px;
 }
 
-.tricolor-indicator{display:flex;height:8px}
-.tri-orange{flex:1;background:var(--india-saffron)}
-.tri-white{flex:1;background:#fff}
-.tri-green{flex:1;background:var(--india-green)}
-
-.card-body{padding:30px}
-
-.card-body h2{
-    text-align:center;
-    color:var(--ncc-blue);
-    font-family:'Playfair Display',serif;
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6));
+    background-color: var(--ncc-blue);
+    color: white;
+    padding: 30px 15px;
+    text-align: center;
 }
 
-.input-group{margin-bottom:18px}
-
-label{font-weight:600}
-
-input,select,textarea{
-    width:100%;
-    padding:12px;
-    border:2px solid #ddd;
-    border-radius:8px;
+.hero-quote {
+    font-style: italic;
+    font-size: 0.9rem;
+    max-width: 85%;
+    margin: 15px auto 0 auto;
+    color: #ffd1a3;
+    border-left: 3px solid #FF9933;
+    padding-left: 12px;
 }
 
-.submit-btn{
-    width:100%;
-    padding:14px;
-    background:var(--india-green);
-    color:#fff;
-    border:none;
-    border-radius:8px;
-    font-size:1.1rem;
-    font-weight:bold;
-    cursor:pointer;
+.registration-section {
+    display: flex;
+    justify-content: center;
+    padding: 50px 20px;
 }
 
-#certificateSection{
-    display:none;
-    text-align:center;
-    padding:40px 15px;
+.pledge-card {
+    background: white;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
 }
 
-canvas{
-    max-width:100%;
-    border:5px solid var(--ncc-blue);
+.tricolor-indicator {
+    height: 10px;
+    display: flex;
 }
 
-.download-btn{
-    background:var(--india-saffron);
-    color:#fff;
-    padding:12px 25px;
-    border:none;
-    border-radius:5px;
-    cursor:pointer;
+.tri-orange { flex: 1; background: var(--india-saffron); }
+.tri-white { flex: 1; background: var(--india-white); }
+.tri-green { flex: 1; background: var(--india-green); }
+
+.card-body {
+    padding: 40px;
+}
+
+.card-body h2 {
+    text-align: center;
+    color: var(--ncc-blue);
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 30px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #e1e1e1;
+    border-radius: 8px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 15px;
+    background: var(--india-green);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#certificateSection {
+    display: none;
+    text-align: center;
+    padding: 50px 20px;
+}
+
+canvas {
+    max-width: 100%;
+    border: 5px solid var(--ncc-blue);
+}
+
+.download-btn {
+    background: var(--india-saffron);
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 </style>
 </head>
@@ -139,10 +169,12 @@ canvas{
 
 <section class="hero">
 <h3>Empower Women For a Viksit Bharat</h3>
+<p>A Commitment towards a Stronger and Empowered Nation.</p>
 <p class="hero-quote">
 As women of this nation, we stand with strength, dignity, and determination.
 When we grow, our nation grows with us.
 </p>
+<h4>- Voice of Empowered Woman</h4>
 </section>
 
 <section class="registration-section" id="register">
@@ -158,7 +190,7 @@ When we grow, our nation grows with us.
 
 <div class="input-group">
 <label>Full Name</label>
-<input type="text" id="name" placeholder="Enter your full name">
+<input type="text" id="name">
 </div>
 
 <div class="input-group">
@@ -173,7 +205,7 @@ When we grow, our nation grows with us.
 <div class="input-group">
 <label>The Pledge</label>
 <textarea rows="3" readonly>
-मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करता/करती हूँ।
+मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए महिलाओं का सम्मान और सशक्तिकरण करने का संकल्प लेता/लेती हूँ।
 </textarea>
 </div>
 
@@ -190,17 +222,18 @@ When we grow, our nation grows with us.
 </section>
 
 <script>
+/* ✅ ONLY GOOGLE PART ADDED */
 const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbxH7QS-m8_x05OM8RDE0viewpMTPnKCCU2eXr088B70AMrbLsziVRXr2uAtPg2KOOrrcw/exec";
 
 const nccLogo = new Image();
 nccLogo.src = "NCC_logo.png";
 
-function submitPledge(){
+function submitPledge() {
     const name = document.getElementById("name").value.trim();
     const gender = document.getElementById("gender").value;
 
-    if(!name || !gender){
-        alert("Please fill all details");
+    if (!name || !gender) {
+        alert("Please provide all required details.");
         return;
     }
 
@@ -208,66 +241,79 @@ function submitPledge(){
     formData.append("name", name);
     formData.append("gender", gender);
 
-    fetch(SCRIPT_URL,{
-        method:"POST",
-        body:formData,
-        mode:"no-cors"
+    fetch(SCRIPT_URL, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors"
     });
 
-    document.getElementById("register").style.display="none";
-    document.querySelector(".hero").style.display="none";
-    document.getElementById("certificateSection").style.display="block";
+    document.getElementById("register").style.display = "none";
+    document.querySelector(".hero").style.display = "none";
+    document.getElementById("certificateSection").style.display = "block";
 
-    drawCertificate(name,gender);
+    drawCertificate(name, gender);
 }
 
-function drawCertificate(name,gender){
-    const c=document.getElementById("canvas");
-    const ctx=c.getContext("2d");
+function drawCertificate(name, gender) {
+    const c = document.getElementById("canvas");
+    const ctx = c.getContext("2d");
+    const date = new Date().toLocaleDateString("en-IN");
 
-    ctx.fillStyle="#fff";
-    ctx.fillRect(0,0,c.width,c.height);
+    ctx.fillStyle = "#fff";
+    ctx.fillRect(0, 0, c.width, c.height);
 
-    ctx.strokeStyle="#FF9933";ctx.lineWidth=15;
-    ctx.strokeRect(10,10,c.width-20,c.height-20);
-    ctx.strokeStyle="#138808";ctx.lineWidth=15;
-    ctx.strokeRect(25,25,c.width-50,c.height-50);
+    ctx.strokeStyle = "#FF9933"; ctx.lineWidth = 15;
+    ctx.strokeRect(10, 10, c.width-20, c.height-20);
+    ctx.strokeStyle = "#138808"; ctx.lineWidth = 15;
+    ctx.strokeRect(25, 25, c.width-50, c.height-50);
 
-    ctx.drawImage(nccLogo,60,80,110,110);
-    ctx.drawImage(nccLogo,830,80,110,110);
+    ctx.drawImage(nccLogo, 60, 85, 110, 110);
+    ctx.drawImage(nccLogo, 830, 85, 110, 110);
 
-    ctx.textAlign="center";
-    ctx.fillStyle="#00264d";
-    ctx.font="bold 40px Cinzel";
-    ctx.fillText("NATIONAL CADET CORPS",500,140);
+    ctx.textAlign = "center";
+    ctx.font = "bold 40px Cinzel";
+    ctx.fillStyle = "#00264d";
+    ctx.fillText("NATIONAL CADET CORPS", 500, 130);
 
-    ctx.font="22px Inter";
-    ctx.fillStyle="#138808";
-    ctx.fillText("NCC ALUMNI UNITY MARCH 2026",500,180);
+    ctx.font = "22px Inter";
+    ctx.fillStyle = "#138808";
+    ctx.fillText("NCC ALUMNI UNITY MARCH 2026", 500, 170);
 
-    ctx.font="italic 30px Playfair Display";
-    ctx.fillStyle="#333";
-    ctx.fillText("Certificate of Pledge",500,260);
+    ctx.font = "italic 30px Playfair Display";
+    ctx.fillStyle = "#333";
+    ctx.fillText("Certificate of Pledge", 500, 250);
 
-    ctx.font="bold 48px Playfair Display";
-    ctx.fillStyle="#FF9933";
-    ctx.fillText(name.toUpperCase(),500,340);
+    ctx.font = "bold 50px Playfair Display";
+    ctx.fillStyle = "#FF9933";
+    ctx.fillText(name.toUpperCase(), 500, 390);
 
-    ctx.font="22px Inter";
-    ctx.fillStyle="#333";
-    ctx.fillText(
-      gender==="female"
-      ?"महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करती हूँ।"
-      :"महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करता हूँ।",
-      500,420
-    );
+    ctx.font = "bold 24px Inter";
+    ctx.fillStyle = "#000080";
+
+    if (gender === "female") [
+        ctx.fillText["मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए", 500, 510);
+        ctx.fillText["महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करती हूँ।", 500, 540);
+    ] else [
+        ctx.fillText["मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए", 500, 510);
+        ctx.fillText["महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करता हूँ।", 500, 540);
+    ]
+
+    ctx.textAlign = "left";
+    ctx.font = "18px Inter";
+    ctx.fillStyle = "#666";
+    ctx.fillText("Date: " + date, 80, 620);
+
+    ctx.textAlign = "right";
+    ctx.font = "bold 18px Inter";
+    ctx.fillStyle = "#00264d";
+    ctx.fillText("1 GUJARAT GIRLS BATTALION NCC AHMEDABAD", 920, 620);
 }
 
-function downloadCert(){
-    const canvas=document.getElementById("canvas");
-    const link=document.createElement("a");
-    link.download="NCC_Pledge_Certificate.png";
-    link.href=canvas.toDataURL();
+function downloadCert() {
+    const canvas = document.getElementById("canvas");
+    const link = document.createElement("a");
+    link.download = "NCC_Pledge_Certificate.png";
+    link.href = canvas.toDataURL("image/png");
     link.click();
 }
 </script>
