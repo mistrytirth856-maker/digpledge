@@ -32,7 +32,7 @@
 }
 
 .nav-logo {
-    height: 60px; /* Smaller for mobile */
+    height: 80px; /* Smaller for mobile */
     width: auto;
 }
 
@@ -53,7 +53,7 @@
 
 /* For Desktop - Reset to larger sizes */
 @media (min-width: 768px) {
-    .nav-logo { height: 90px; }
+    .nav-logo { height: 100px; }
     .header-text h1 { font-size: 2rem; }
     .header-text h2 { font-size: 1.1rem; }
     .main-header { justify-content: center; gap: 40px; }
@@ -325,9 +325,9 @@ function drawCertificate(name, gender) {
 
     if(nccLogo.complete) {
         // Left Logo
-        ctx.drawImage(nccLogo, 95, 95, 70, 70);
+        ctx.drawImage(nccLogo, 60, 85, 110, 110);
         // Right Logo
-        ctx.drawImage(nccLogo, 845, 95, 70, 70);
+        ctx.drawImage(nccLogo, 830, 85, 110, 110);
     }
     // Headings
     ctx.textAlign = "center";
@@ -356,7 +356,8 @@ function drawCertificate(name, gender) {
     ctx.font = "20px Inter";
     ctx.fillText("has taken a pledge to Empower Women for a Viksit Bharat.", c.width/2, 450);
 
-    const hindi = gender === "female" ? "मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए महिलाओं/nका सम्मान और सशक्तिकरण करने की प्रतिज्ञा करती हूँ।।" : "मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए महिलाओं/nका सम्मान और सशक्तिकरण करने की प्रतिज्ञा करता हूँ।।";
+    const hindi = gender === "female" ? "मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए ।" : "मैं एक मजबूत और अधिक विकसित राष्ट्र के निर्माण के लिए ।";
+    const hindi = gender === "female" ? "महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करती हूँ।।" : "महिलाओं का सम्मान और सशक्तिकरण करने की प्रतिज्ञा करता हूँ।।";
     ctx.font = "bold 24px Inter";
     ctx.fillStyle = "#000080";
     ctx.fillText(hindi, c.width/2, 510);
